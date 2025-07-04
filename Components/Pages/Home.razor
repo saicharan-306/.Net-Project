@@ -1,0 +1,38 @@
+﻿@page "/"
+@rendermode InteractiveServer
+
+<h3>Hello, @userName. Welcome to our <b>application</b>.</h3>
+
+<button class="btn btn-primary" @onclick="NameChange">Change Name</button>
+
+@if (testNum == 1){
+    <p>Number is 1</p>
+}
+else{
+    <p>Number is not 1</p>
+}
+
+
+
+@code {
+    private string userName = "Sai";
+    private int testNum = 5;
+
+    private void ChangeName()
+    {
+        userName = "Charan";
+    }
+
+    private void NameChange()
+    {
+        if (userName == "Sai"){
+
+               userName = "Charan";
+               }
+               else{
+                userName = "Sai";
+               }
+    }
+}
+
+
